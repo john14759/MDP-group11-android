@@ -409,8 +409,8 @@ public class MainActivity extends AppCompatActivity {
                     List<Map<String, Object>> algoDetailsList = new ArrayList<>();
                     Map<String, Object> algoDetails = new HashMap<>();
                     algoDetails.put("obstacles", obstacleDetailsList);
-                    algoDetails.put("robot_x", (robotXcoord-1));
-                    algoDetails.put("robot_y", (robotYcoord-3));
+                    algoDetails.put("robot_x", (robotXcoord));
+                    algoDetails.put("robot_y", (robotYcoord-2));
                     algoDetails.put("robot_dir", rotationDetails);
                     algoDetails.put("retrying", "False");
                     algoDetailsList.add(algoDetails);
