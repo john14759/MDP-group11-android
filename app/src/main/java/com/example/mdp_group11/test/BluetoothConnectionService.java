@@ -234,7 +234,7 @@ public class BluetoothConnectionService extends AppCompatActivity {
             while(true){
                 try {
                     bytes = inStream.read(buffer);
-                    String incomingMessage = new String(buffer, 0, bytes);
+                    String incomingMessage = new String(buffer, 0, bytes).trim();
                     Log.d(TAG, "InputStream: " + incomingMessage);
 
                     if (!incomingMessage.contains("{")){
@@ -247,7 +247,7 @@ public class BluetoothConnectionService extends AppCompatActivity {
                                 String commsMessage = "Obstacle ID changed from " + messageArray[0] + " to " + messageArray[1];
                                 MainActivity.getInstance().updateCommsBox(commsMessage);
                             } catch (Exception e) {
-                                Log.e(TAG, "Image not found");
+                                Log.e(TAG, "Image not sent");
                             }
                             });
 
